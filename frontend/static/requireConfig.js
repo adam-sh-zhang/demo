@@ -7,5 +7,13 @@ require.config({
         "config" : "static/config",
         "app" : "static/app"
     },
-    deps: ["bootstrap"]
+    deps: ["bootstrap"],
+    shim: {
+        "angular": {
+            exports: "angular"
+        },
+        "angular-ui-router": {
+            deps: ["angular"]
+        }
+    }
 });
